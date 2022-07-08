@@ -9,15 +9,13 @@ const Statistics = ({ options, total, positivePercentage }) => {
           {key} : {options[key]}
         </p>
       ))}
-      <div className="Statistics__total">
-        <p>
-          Total : <span className="Statistics__value"> {total} </span>
-        </p>
-        <p>
-          PositiveFeedback :
-          <span className="Statistics__value"> {positivePercentage} % </span>
-        </p>
-      </div>
+      <p>
+        total: <span className="Statistics__value">{total}</span>
+      </p>
+      <p>
+        positive feedback :
+        <span className="Statistics__value"> {positivePercentage} % </span>
+      </p>
     </div>
   );
 };
