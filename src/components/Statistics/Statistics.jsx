@@ -1,7 +1,7 @@
 import React from 'react';
 import './Statistics.css';
+
 const Statistics = ({ options, total, positivePercentage }) => {
-  // console.log(options);
   return (
     <div className="Statistics__feedback">
       {Object.keys(options).map(key => (
@@ -21,4 +21,5 @@ const Statistics = ({ options, total, positivePercentage }) => {
     </div>
   );
 };
+
 export default Statistics;
