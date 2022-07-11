@@ -38,7 +38,6 @@ export class App extends Component {
     const elementKey = Object.keys(this.state);
     return (
       <div className={css.container}>
-        {/* <div className={css.wrapper}> */}
         <Section title="Please leave feedback">
           <div>
             <FeedbackOptions

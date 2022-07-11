@@ -18,7 +18,7 @@ const Statistics = ({ good, bad, neutral, total, positivePercentage }) => {
         <span className={css.StatisticsFeedback}>total:</span> {total}
       </li>
       <li className={css.StatisticsValue}>
-        <span className={css.StatisticsFeedback}>positivepercentage:</span>
+        <span className={css.StatisticsFeedback}>positive feedback:</span>
         {positivePercentage}%
       </li>
     </ul>
