@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './FeedbackOptions.css';
+import css from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return options.map(option => (
@@ -8,7 +8,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       key={option}
       type="button"
       onClick={() => onLeaveFeedback(option)}
-      className="Feedback__button"
+      className={css.FeedbacButton}
     >
       {option}
     </button>

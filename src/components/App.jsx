@@ -3,6 +3,7 @@ import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
 import Notification from './Notification';
 import Section from './Section';
+import css from './App.module.css';
 
 export class App extends Component {
   static defaultProps = {
@@ -27,26 +28,32 @@ export class App extends Component {
   };
   countPositiveFeedbackPercentage = () => {
     const good = this.state.good;
+    console.log(good);
     return this.countTotalFeedback() === 0
       ? '0'
       : ((good / this.countTotalFeedback()) * 100).toFixed(0);
   };
+
   render() {
+    const elementKey = Object.keys(this.state);
     return (
-      <div className="Feedback-title">
+      <div className={css.container}>
+        {/* <div className={css.wrapper}> */}
         <Section title="Please leave feedback">
           <div>
             <FeedbackOptions
-              options={Object.keys(this.state)}
+              options={elementKey}
               onLeaveFeedback={this.leaveFeedback}
             />
           </div>
         </Section>
-        <div className="Feedback-text">
+        <div className={css.feedbackText}>
           <Section title="Statistics">
             {this.countTotalFeedback() ? (
               <Statistics
-                options={this.state}
+                good={this.state.good}
+                bad={this.state.bad}
+                neutral={this.state.neutral}
                 total={this.countTotalFeedback()}
                 positivePercentage={this.countPositiveFeedbackPercentage()}
               />

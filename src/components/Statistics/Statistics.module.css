@@ -1,9 +1,10 @@
-.Statistics__feedback {
+.StatisticsFeedback {
   font-size: 20px;
   color: rgb(94, 94, 155);
   text-decoration: underline;
+  padding-right: 5px;
 }
 
-.Statistics__value {
+.StatisticsValue {
   color: rgb(118, 148, 9);
 }
