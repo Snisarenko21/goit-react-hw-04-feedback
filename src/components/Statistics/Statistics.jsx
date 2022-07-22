@@ -25,6 +25,30 @@ const Statistics = ({ good, bad, neutral, total, positivePercentage }) => {
   );
 };
 
+// const Statistics = ({ options, total, positivePercentage }) => {
+//   return (
+//     <div>
+//       {Object.keys(options).map(key => (
+//         <p key={key}>
+//           {key} : {options[key]}
+//         </p>
+//       ))}
+//       <div className={css.StatisticsValue}>
+//         <p>
+//           Total : <span className={css.StatisticsValue}> {total} </span>
+//         </p>
+//         <p>
+//           PositiveFeedback :
+//           <span className={css.StatisticsFeedback}>
+//             {' '}
+//             {positivePercentage} %{' '}
+//           </span>
+//         </p>
+//       </div>
+//     </div>
+//   );
+// };
+
 Statistics.prototype = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
